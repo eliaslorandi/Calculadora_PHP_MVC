@@ -1,31 +1,41 @@
 <?php
 
 namespace app\controllers;
+
 use app\core\Controller;
 use app\models\Operation;
 
 class CalcController extends Controller{
     public function index(){
-        echo'calculator system';
+        $this->load('Calc');
     }
 
-    public function add($a, $b){
+    public function add(){
         $operation = new Operation();
+        $a = $_POST["a"];
+        $b = $_POST["b"];
         echo $operation->add($a, $b);
     }
 
-    public function sub($a, $b){
+    public function sub(){
         $operation = new Operation();
+        $a = $_POST["a"];
+        $b = $_POST["b"];
         echo $operation->sub($a, $b);
     }
 
-    public function multi($a, $b){
+    public function multi(){
         $operation = new Operation();
+        $a = $_POST["a"];
+        $b = $_POST["b"];
         echo $operation->multi($a, $b);
+        $this->load("calc");
     }
 
-    public function div($a, $b=0){
+    public function div(){
         $operation = new Operation();
+        $a = $_POST["a"];
+        $b = $_POST["b"];
         echo $operation->div($a, $b);
     }
 }
