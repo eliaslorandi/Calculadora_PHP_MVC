@@ -28,8 +28,11 @@ class CalcController extends Controller{
         $operation = new Operation();
         $a = $_POST["a"];
         $b = $_POST["b"];
-        echo $operation->multi($a, $b);
-        $this->load("calc");
+
+        $die["a"] = $a;
+        $die["b"] = $b;
+        $die["result"] = $operation->multi($a, $b); 
+        $this->load("calc", $die);
     }
 
     public function div(){

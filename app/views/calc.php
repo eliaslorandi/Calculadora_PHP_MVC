@@ -9,12 +9,16 @@
 <body>
     <h1>PHP MVC CALCULATOR SYSTEM</h1>
     <form method="POST" action="<?php echo URL_BASE ."calc/multi"?>">
-        A value: <input type="text" name="a">
+        A value: <input type="text" name="a" value="<?php echo isset($a) ? $a : "" ?>">
         <br>
-        B value: <input type="text" name="b">
+        B value: <input type="text" name="b" value="<?php echo isset($b) ? $b : "" ?>">
         <br>
         <input type="submit" value="Send">
     </form>
-    <p>Result: </p>
+    <?php
+        if(isset($result)){
+            echo "<p> Result: $result <p/>";
+        }
+    ?>
 </body>
 </html>
