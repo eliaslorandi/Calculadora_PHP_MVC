@@ -41,4 +41,5 @@ class CalcController extends Controller{
         $b = $_POST["b"];
         echo $operation->div($a, $b);
     }
+
 }
