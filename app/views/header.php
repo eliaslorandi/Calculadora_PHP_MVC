@@ -11,10 +11,11 @@
 <body>
     <header>
         <div class="button-group">
-            <button class="button">Addition</button>
-            <button class="button">Subtraction</button>
-            <button class="button">Multiplication</button>
-            <button class="button">Division</button>
+            <a href="<?php echo URL_BASE . "home" ?>" class="button">Home</a>
+            <a href="<?php echo URL_BASE . "calc/addition" ?>" class="button">Addition</a>
+            <a href="<?php echo URL_BASE . "calc/subtraction" ?>" class="button">Subtraction</a>
+            <a href="<?php echo URL_BASE . "calc/multiplication" ?>" class="button">Multiplication</a>
+            <a href="<?php echo URL_BASE . "calc/division" ?>" class="button">Division</a>
         </div>
     </header>
 

@@ -7,11 +7,9 @@
 </head>
 <body>
 	<div class="container">
-		<p>Calculadora simples em PHP com propósito de estudo.</p>
-		<p>Criado por: Elias Lorandi.</p>
-		<p>Email: elias.lorandi@hotmail.com</p>
-		<p> </p>
-		<input type="submit" value="Start">
+		<p>Choose one of the option above to start.</p>
+		<p>Simple calculator in MVC PHP for study purpose.</p>
+		<p>Create by Elias Lorandi.</p>
 	</div>
 </body>
 </html>

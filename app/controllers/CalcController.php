@@ -1,30 +1,45 @@
 <?php
 
 namespace app\controllers;
-
 use app\core\Controller;
 use app\models\Operation;
 
 class CalcController extends Controller{
     public function index(){
-        $this->load('Calc');
+        $data["view"] = "home";
+        $this->load("template", $data);
     }
 
-    public function add(){
+    public function addition(){
+        $data["view"] = "addition";
+        $this->load("template", $data);
+    }
+
+    public function calculateAddition(){
         $operation = new Operation();
         $a = $_POST["a"];
         $b = $_POST["b"];
         echo $operation->add($a, $b);
     }
 
-    public function sub(){
+    public function subtraction(){
+        $data["view"] = "subtraction";
+        $this->load("template", $data);
+    }
+
+    public function calculateSubtraction(){
         $operation = new Operation();
         $a = $_POST["a"];
         $b = $_POST["b"];
-        echo $operation->sub($a, $b);
+        echo $operation->add($a, $b);
     }
 
-    public function multi(){
+    public function multiplication(){
+        $data["view"] = "multiplication";
+        $this->load("template", $data);
+    }
+
+    public function calculateMultiplication(){
         $operation = new Operation();
         $a = $_POST["a"];
         $b = $_POST["b"];
@@ -35,7 +50,12 @@ class CalcController extends Controller{
         $this->load("calc", $die);
     }
 
-    public function div(){
+    public function division(){
+        $data["view"] = "division";
+        $this->load("template", $data);
+    }
+
+    public function calculateDivision(){
         $operation = new Operation();
         $a = $_POST["a"];
         $b = $_POST["b"];
