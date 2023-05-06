@@ -19,7 +19,13 @@ class CalcController extends Controller{
         $operation = new Operation();
         $a = $_POST["a"];
         $b = $_POST["b"];
-        echo $operation->add($a, $b);
+
+        $data["a"] = $a;
+        $data["b"] = $b;
+        $data["result"] = $operation->addition($a, $b);
+
+        $data["view"] = "addition";
+        $this->load("template", $data);
     }
 
     public function subtraction(){
@@ -31,7 +37,13 @@ class CalcController extends Controller{
         $operation = new Operation();
         $a = $_POST["a"];
         $b = $_POST["b"];
-        echo $operation->add($a, $b);
+
+        $data["a"] = $a;
+        $data["b"] = $b;
+        $data["result"] = $operation->subtraction($a, $b);
+
+        $data["view"] = "subtraction";
+        $this->load("template", $data);
     }
 
     public function multiplication(){
@@ -44,10 +56,12 @@ class CalcController extends Controller{
         $a = $_POST["a"];
         $b = $_POST["b"];
 
-        $die["a"] = $a;
-        $die["b"] = $b;
-        $die["result"] = $operation->multi($a, $b); 
-        $this->load("calc", $die);
+        $data["a"] = $a;
+        $data["b"] = $b;
+        $data["result"] = $operation->multiplication($a, $b);
+
+        $data["view"] = "multiplication";
+        $this->load("template", $data);
     }
 
     public function division(){
@@ -59,7 +73,13 @@ class CalcController extends Controller{
         $operation = new Operation();
         $a = $_POST["a"];
         $b = $_POST["b"];
-        echo $operation->div($a, $b);
+
+        $data["a"] = $a;
+        $data["b"] = $b;
+        $data["result"] = $operation->division($a, $b);
+
+        $data["view"] = "division";
+        $this->load("template", $data);
     }
 
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <form method="POST" action="<?php echo URL_BASE ."calc/multi"?>">
+    <form method="POST" action="<?php echo URL_BASE ."calc/addition"?>">
         A value: <input type="text" name="a" value="<?php echo isset($a) ? $a : "" ?>">
         <br>
         B value: <input type="text" name="b" value="<?php echo isset($b) ? $b : "" ?>">
