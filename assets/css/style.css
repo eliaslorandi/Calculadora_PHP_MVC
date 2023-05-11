@@ -21,22 +21,23 @@ body {
 input[type=number]{
     padding: 10px;
     margin: 5px;
-    width: 100%;
+    width: 92%;
     border-radius: 5px;
     border: none;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 input[type=submit] {
+    margin-left: auto;
     padding: 10px;
-    margin: 5px;
+    margin: 20px;
+    width: 90%;
     background-color: #4CAF50;
     color: #fff;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    width: 100%;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;

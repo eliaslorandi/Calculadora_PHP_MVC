@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="<?php echo URL_BASE ?>assets/css/style.css">
-		
-	</style>
-</head>
 <body>
 	<div class="container">
 		<p>Choose one of the option above to start.</p>
